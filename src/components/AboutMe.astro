@@ -1,5 +1,6 @@
 ---
 import Card from "./Card/index.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
@@ -9,10 +10,24 @@ import Card from "./Card/index.astro";
       <br />
       My primary tools of choice includes:
       <ul class="list-disc list-inside">
-        <li>JavaScript</li>
-        <li>Svelte</li>
-        <li>React</li>
-        <li>Nodejs</li>
+        <li class="flex flex-row gap-2 items-center">
+          JavaScript <Icon
+            name="mdi:language-javascript"
+            class="text-yellow-400"
+          />
+        </li>
+        <li class="flex flex-row gap-2 items-center">
+          Svelte <Icon name="ri:svelte-fill" class="text-[#ff3e00]" />
+        </li>
+        <li class="flex flex-row gap-2 items-center">
+          Vue <Icon name="mdi:vuejs" class="text-green-400" />
+        </li>
+        <li class="flex flex-row gap-2 items-center">
+          React <Icon name="mdi:react" class="text-blue-600" />
+        </li>
+        <li class="flex flex-row gap-2 items-center">
+          Nodejs <Icon name="mdi:nodejs" class="text-green-700" />
+        </li>
       </ul>
     </p>
     <p class="text-sm font-light">

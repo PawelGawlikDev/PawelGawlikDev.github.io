@@ -8,6 +8,15 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: {
+        move: "move 5s linear infinite",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
+      },
       boxShadow: {
         custom: `2px 2px 0`,
         "custom-hover": `1px 1px 0`,
@@ -40,11 +49,11 @@ export default {
           200: "#262626",
           300: "#202020",
           400: "#1A1A1A",
-          500: "#171717" /* Exactly your example for the background */,
+          500: "#171717",
           600: "#141414",
           700: "#111111",
           800: "#0E0E0E",
-          900: "#0B0B0B" /* Deeper and darker */,
+          900: "#0B0B0B",
         },
         primary: {
           100: "#F9CDD3",

@@ -2,7 +2,23 @@
 import Card from "./Card/index.astro";
 import Button from "./Button.astro";
 import { LINKS } from "../utils/constants";
-import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import { Tooltip } from "./Tooltip";
+
+const myInfo = [
+  {
+    id: 1,
+    name: "Paweł Gawlik",
+    designations: [
+      "Frontend Developer 💻",
+      "Java Script engineer 🛠️",
+      "Chess Player ♟️",
+      "Write to me ✍️",
+    ],
+    image:
+      "https://media.licdn.com/dms/image/D4D03AQHL5x9_UucJyA/profile-displayphoto-shrink_800_800/0/1675630208205?e=1727913600&v=beta&t=XOnu4f1K_Qp9gTt38_zpSXXkt3dFecRmAtVV4v93SUw",
+  },
+];
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -12,19 +28,30 @@ import { Image } from "astro:assets";
         <h6 class="text-sm font-light m-0 text-gray-500">welcome</h6>
         <p class="m-0 font-light text-xl">
           Hi, I'm <b class="font-bold">Paweł Gawlik</b>, a software developer.
+          Working as a developer allows me to expand my existing skills and gain
+          new ones in the field of Svelte/Svelte kit, JavaScript and Playwright
+          framework, as well as making web applications for desktop and mobile
+          browsers. In addition, I have the skills to write web applications
+          using Django. Currently I'm expanding my knowledge in the field of
+          artificial intelligence, machine learning and promp engeniring.
         </p>
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-4 items-center">
         <a href={LINKS.github} aria-label="github profile" target="_blank">
           <Button aria-label="github profile">
+            <Icon name="mdi:github" class="h-6" />
             <span class="sr-only">GitHub Profile</span>
           </Button>
         </a>
         <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
           <Button aria-label="linkedin profile">
+            <Icon name="mdi:linkedin" class="h-6" />
             <span class="sr-only">Linkedin Profile</span>
           </Button>
         </a>
+        <div class="test">
+          <Tooltip items={myInfo} client:visible />
+        </div>
       </div>
     </div>
   </div>

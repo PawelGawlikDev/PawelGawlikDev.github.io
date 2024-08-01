@@ -10,20 +10,28 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.1",
-    "@astrojs/svelte": "^5.6.0",
+    "@astrojs/check": "^0.9.1",
+    "@astrojs/react": "^3.6.1",
+    "@astrojs/svelte": "^5.7.0",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.11.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.13.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.3.2",
+    "framer-motion": "^11.3.21",
     "motion": "^10.18.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "svelte": "^4.2.18",
     "tailwind-merge": "^2.4.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.67",
+    "@iconify-json/ri": "^1.1.21",
+    "astro-icon": "^1.1.0",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4"
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7"
   }
 }
