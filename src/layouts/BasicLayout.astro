@@ -28,9 +28,7 @@ const { title, description } = Astro.props;
     <meta name="twitter:description" content={description} />
     <link rel="preconnect" href="https://cdn.fontshare.com" />
   </head>
-  <body
-    class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"
-  >
+  <body class="bg-darkslate-700 md:h-screen flex flex-col items-center">
     <slot name="loader" />
     <slot />
   </body>

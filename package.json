@@ -14,12 +14,14 @@
     "@astrojs/react": "^3.6.1",
     "@astrojs/svelte": "^5.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@radix-ui/react-hover-card": "^1.1.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.13.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
     "motion": "^10.18.0",
+    "qss": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "svelte": "^4.2.18",
@@ -27,6 +29,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.1.43",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/ri": "^1.1.21",
     "astro-icon": "^1.1.0",

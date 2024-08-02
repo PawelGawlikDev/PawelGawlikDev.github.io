@@ -15,6 +15,8 @@ export const Tooltip = ({
     name: string;
     designations: string[];
     image: string;
+    url: string | undefined;
+    background: string | undefined;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -95,14 +97,17 @@ export const Tooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <img
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.image}
-            alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
-          />
+          <a href={item.url} target="_blank">
+            <img
+              onMouseMove={handleMouseMove}
+              height={100}
+              width={100}
+              src={item.image}
+              alt={item.name}
+              style={{ backgroundColor: item.background }}
+              className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-primary-400 relative transition duration-500"
+            />
+          </a>
         </div>
       ))}
     </>

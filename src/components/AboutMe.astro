@@ -1,6 +1,7 @@
 ---
 import Card from "./Card/index.astro";
 import { Icon } from "astro-icon/components";
+import { LinkPreview } from "./LinkPreview";
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
@@ -11,27 +12,42 @@ import { Icon } from "astro-icon/components";
       My primary tools of choice includes:
       <ul class="list-disc list-inside">
         <li class="flex flex-row gap-2 items-center">
-          JavaScript <Icon
-            name="mdi:language-javascript"
-            class="text-yellow-400"
-          />
+          JavaScript <LinkPreview
+            client:visible
+            url="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          >
+            <Icon name="mdi:language-javascript" class="text-yellow-400" />
+          </LinkPreview>
         </li>
         <li class="flex flex-row gap-2 items-center">
-          Svelte <Icon name="ri:svelte-fill" class="text-[#ff3e00]" />
+          Svelte <LinkPreview client:visible url="https://svelte.dev"
+            ><Icon name="ri:svelte-fill" class="text-[#ff3e00]" />
+          </LinkPreview>
         </li>
         <li class="flex flex-row gap-2 items-center">
-          Vue <Icon name="mdi:vuejs" class="text-green-400" />
+          Vue <LinkPreview client:visible url="https://vuejs.org"
+            ><Icon name="mdi:vuejs" class="text-green-400" />
+          </LinkPreview>
         </li>
         <li class="flex flex-row gap-2 items-center">
-          React <Icon name="mdi:react" class="text-blue-600" />
+          React <LinkPreview client:visible url="https://react.dev"
+            ><Icon name="mdi:react" class="text-blue-600" />
+          </LinkPreview>
         </li>
         <li class="flex flex-row gap-2 items-center">
-          Nodejs <Icon name="mdi:nodejs" class="text-green-700" />
+          Nodejs <LinkPreview client:visible url="https://nodejs.org/en"
+            ><Icon name="mdi:nodejs" class="text-green-700" />
+          </LinkPreview>
+        </li>
+        <li class="flex flex-row gap-2 items-center">
+          Playwright <LinkPreview client:visible url="https://playwright.dev">
+            <Icon name="logos:playwright" />
+          </LinkPreview>
         </li>
       </ul>
-    </p>
-    <p class="text-sm font-light">
-      Beyond coding, I'm passionate about chess and squash.
+      <p class="text-sm font-light">
+        Beyond coding, I'm passionate about chess and squash.
+      </p>
     </p>
   </div>
 </Card>
