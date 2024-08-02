@@ -6,6 +6,29 @@ import ContactsCard from "../components/ContactsCard.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Now from "../components/Now.astro";
 import { LinkPreview } from "../components/LinkPreview";
+import { GoogleGeminiEffect } from "../components/GoogleGeminiEffect";
+import { TypewriterEffectSmooth } from "../components/TypewriterEffect";
+import { Meteors } from "../components/Meteors";
+import { HoverBorderGradient } from "../components/HoverBorderGradient";
+
+const words = [
+  {
+    text: "Build",
+  },
+  {
+    text: "awesome",
+  },
+  {
+    text: "apps",
+  },
+  {
+    text: "with",
+  },
+  {
+    text: "Aceternity.",
+    class: "text-blue-500 dark:text-blue-500",
+  },
+];
 ---
 
 <script>
@@ -43,6 +66,58 @@ import { LinkPreview } from "../components/LinkPreview";
     <ContactsCard />
     <Now />
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
+      <div class="">
+        <div class="w-full relative max-w-xs">
+          <div
+            class="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl"
+          >
+          </div>
+          <div
+            class="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start"
+          >
+            <div
+              class="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-2 w-2 text-gray-300"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"></path>
+              </svg>
+            </div>
+
+            <h1 class="font-bold text-xl text-white mb-4 relative z-50">
+              More Projects
+            </h1>
+
+            <p class="font-normal text-base text-slate-500 mb-4 relative z-50">
+              Explore some of my Github projects
+            </p>
+
+            <a href="/projects">
+              <HoverBorderGradient
+                client:visible
+                containerClassName="rounded-full"
+                as="button"
+                className="bg-black text-white flex items-center space-x-2"
+              >
+                <span>Explore</span>
+              </HoverBorderGradient>
+            </a>
+
+            <Meteors number={20} client:visible />
+          </div>
+        </div>
+      </div>
+    </Card>
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
         © 2024 · Crafted with ♥️ using <a
           href="https://astro.build/"
@@ -52,4 +127,10 @@ import { LinkPreview } from "../components/LinkPreview";
       </p>
     </Card>
   </main>
+  <!-- <TypewriterEffectSmooth client:visible words={words} /> -->
+  <!-- <div
+    class="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+  >
+    <GoogleGeminiEffect client:visible />
+  </div> -->
 </Layout>
