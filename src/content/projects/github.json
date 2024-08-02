@@ -1,0 +1,58 @@
+[
+  {
+    "type": "Machine Learning",
+    "id": "ml",
+    "repositories": [
+      {
+        "projectName": "Scikit-Learn tutorials",
+        "url": "https://github.com/PawelGawlikDev/scikit-learn"
+      },
+      {
+        "projectName": "Machine Learning Labs",
+        "url": "https://github.com/PawelGawlikDev/machine_learning"
+      }
+    ]
+  },
+  {
+    "type": "Java",
+    "id": "java",
+    "repositories": [
+      {
+        "projectName": "WSB JPA",
+        "url": "https://github.com/PawelGawlikDev/wsb_jpa"
+      },
+      {
+        "projectName": "FitnessTracker",
+        "url": "https://github.com/PawelGawlikDev/CapWSB-FitnessTracker"
+      }
+    ]
+  },
+  {
+    "type": "JavaScript/TypeScript",
+    "id": "js",
+    "repositories": [
+      {
+        "projectName": "Tag Viewer",
+        "url": "https://github.com/PawelGawlikDev/tag-viewer"
+      },
+      {
+        "projectName": "Svelte electron template",
+        "url": "https://github.com/PawelGawlikDev/svelte-electron"
+      }
+    ]
+  },
+  {
+    "type": "Python/Django",
+    "id": "python",
+    "repositories": [
+      {
+        "projectName": "Django scraper",
+        "url": "https://github.com/PawelGawlikDev/django-scraper"
+      },
+      {
+        "projectName": "Chess app (engenieering work)",
+        "url": "https://github.com/PawelGawlikDev/Chess-app-engineering-work"
+      }
+    ]
+  }
+]

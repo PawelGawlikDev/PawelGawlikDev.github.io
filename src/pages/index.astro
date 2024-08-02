@@ -5,30 +5,8 @@ import IntroCard from "../components/IntroCard.astro";
 import ContactsCard from "../components/ContactsCard.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Now from "../components/Now.astro";
-import { LinkPreview } from "../components/LinkPreview";
-import { GoogleGeminiEffect } from "../components/GoogleGeminiEffect";
-import { TypewriterEffectSmooth } from "../components/TypewriterEffect";
 import { Meteors } from "../components/Meteors";
 import { HoverBorderGradient } from "../components/HoverBorderGradient";
-
-const words = [
-  {
-    text: "Build",
-  },
-  {
-    text: "awesome",
-  },
-  {
-    text: "apps",
-  },
-  {
-    text: "with",
-  },
-  {
-    text: "Aceternity.",
-    class: "text-blue-500 dark:text-blue-500",
-  },
-];
 ---
 
 <script>
@@ -64,8 +42,7 @@ const words = [
     <IntroCard />
     <AboutMe />
     <ContactsCard />
-    <Now />
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
+    <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
       <div class="">
         <div class="w-full relative max-w-xs">
           <div
@@ -117,20 +94,6 @@ const words = [
         </div>
       </div>
     </Card>
-    <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2024 · Crafted with ♥️ using <a
-          href="https://astro.build/"
-          target="_blank"
-          class="text-red-500">Astro</a
-        >.
-      </p>
-    </Card>
+    <Now />
   </main>
-  <!-- <TypewriterEffectSmooth client:visible words={words} /> -->
-  <!-- <div
-    class="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
-  >
-    <GoogleGeminiEffect client:visible />
-  </div> -->
 </Layout>

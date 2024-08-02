@@ -1,0 +1,37 @@
+[
+  {
+    "name": "JavaScript",
+    "color": "#facc15",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "icon": "mdi:language-javascript"
+  },
+  {
+    "name": "Svelte",
+    "color": "#ff3e00",
+    "url": "https://svelte.dev",
+    "icon": "ri:svelte-fill"
+  },
+  {
+    "name": "Vue",
+    "color": "#4ade80",
+    "url": "https://vuejs.org",
+    "icon": "mdi:vuejs"
+  },
+  {
+    "name": "React",
+    "color": "#2563eb",
+    "url": "https://react.dev",
+    "icon": "mdi:react"
+  },
+  {
+    "name": "Nodejs",
+    "color": "#15803d",
+    "url": "https://nodejs.org/en",
+    "icon": "mdi:nodejs"
+  },
+  {
+    "name": "Playwright",
+    "url": "https://playwright.dev",
+    "icon": "logos:playwright"
+  }
+]

@@ -1,1 +1,71 @@
-<p>Projects</p>
+---
+import Layout from "../layouts/Layout.astro";
+import EvervaultCard from "../components/EvervaultCard.svelte";
+import type { Projects } from "../types";
+import { getEntry } from "astro:content";
+import { TypewriterEffectSmooth } from "../components/TypewriterEffect";
+const projects = await getEntry("projects", "github");
+const upcoming = await getEntry("projects", "upcoming");
+---
+
+<script>
+  import { stagger, spring, timeline, type TimelineDefinition } from "motion";
+  import { loaderAnimation } from "../utils/constants";
+  const cards = document.querySelectorAll(".card");
+
+  const sequence = [
+    loaderAnimation,
+    [
+      cards,
+      { y: ["40%", "0%"], opacity: [0, 1] },
+      {
+        at: "-0.1",
+        duration: 0.4,
+        delay: stagger(0.3),
+        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+      },
+    ],
+  ];
+
+  timeline(sequence as TimelineDefinition);
+</script>
+
+<Layout
+  title="Paweł Gawlik - My Github Projects"
+  description="I'm a developer based in Poland. My primary tools of choice include: JavaScript, Svelte, Vue, React, and Node.js."
+>
+  <main class="text-white w-full relative overflow-ellipsis">
+    {
+      projects.data.map((project: Projects) => (
+        <div>
+          <TypewriterEffectSmooth
+            client:visible
+            words={project.type
+              .split(" ")
+              .map((word) => ({ text: word, className: "text-white" }))}
+          />
+          <div class="flex flex-row overflow-x-auto py-4 overflow-y-hidden">
+            {project.repositories.map((repo) => (
+              <a
+                href={repo.url}
+                class="card relative mx-5 mb-5 flex lg:max-w-sm lg:h-[30rem] xl:h-[30rem] sm:h-[25rem] md:h-[25rem] sm:max-w-[20rem] md:max-w-[20rem] xl:max-w-sm flex-col items-start border p-4 border-white/[0.2]"
+              >
+                <EvervaultCard text={repo.projectName} client:visible />
+              </a>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+    <div>
+      <div>
+        <TypewriterEffectSmooth
+          client:visible
+          words={upcoming.data.type
+            .split(" ")
+            .map((word: string) => ({ text: word, className: "text-white" }))}
+        />
+      </div>
+    </div>
+  </main>
+</Layout>

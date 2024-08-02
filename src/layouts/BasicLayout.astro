@@ -16,6 +16,7 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="robots" content="/favicon/sitemap-index.xml" />
     <!-- Basic OG tags for sharing your website's content on platforms like Facebook and LinkedIn -->
     <meta property="og:title" content={title} />
@@ -56,6 +57,23 @@ const { title, description } = Astro.props;
     margin: 0;
     font-family: "Satoshi", sans-serif;
     -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    --line-color: var(--darkslate-400);
+    --line-size: 80px;
+    content: "";
+    height: 100vh;
+    width: 101vw;
+    position: fixed;
+    background:
+      linear-gradient(90deg, var(--line-color) 1px, transparent 1px) 0 0 /
+        var(--line-size) var(--line-size),
+      linear-gradient(var(--line-color) 1px, transparent 1px) 0 0 /
+        var(--line-size) var(--line-size);
+    top: 0;
+    z-index: -1;
+    -webkit-mask: linear-gradient(-360deg, transparent 40%, white);
+    mask: linear-gradient(-360deg, transparent 40%, white);
   }
 
   h1,
