@@ -21,8 +21,7 @@ export default defineConfig({
     sitemap(),
     partytown({
       config: {
-        // Add the "dataLayer.push" as a forwarding-event.
-        forward: ['dataLayer.push'],
+        forward: ["dataLayer.push"],
       },
     }),
   ],
