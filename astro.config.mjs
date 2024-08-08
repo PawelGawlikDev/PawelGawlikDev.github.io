@@ -19,6 +19,11 @@ export default defineConfig({
       preprocess: [vitePreprocess()],
     }),
     sitemap(),
-    partytown(),
+    partytown({
+      config: {
+        // Add the "dataLayer.push" as a forwarding-event.
+        forward: ['dataLayer.push'],
+      },
+    }),
   ],
 });
