@@ -44,7 +44,7 @@ const upcoming = await getEntry("projects", "upcoming");
               .split(" ")
               .map((word) => ({ text: word, className: "text-white" }))}
           />
-          <div class="flex flex-row overflow-x-auto py-4 overflow-y-hidden">
+          <div class="card-scroll flex flex-row overflow-x-auto py-4 overflow-y-hidden">
             {project.repositories.map((repo) => (
               <a
                 href={repo.url}
@@ -69,3 +69,9 @@ const upcoming = await getEntry("projects", "upcoming");
     </div>
   </main>
 </Layout>
+
+<style>
+  .card-scroll::-webkit-scrollbar {
+    display: none;
+  }
+</style>

@@ -32,6 +32,14 @@
     "id": "js",
     "repositories": [
       {
+        "projectName": "Startify Chrome Extension",
+        "url": "https://github.com/PawelGawlikDev/startify"
+      },
+      {
+        "projectName": "Startify landing page",
+        "url": "https://github.com/PawelGawlikDev/startify_web"
+      },
+      {
         "projectName": "Tag Viewer",
         "url": "https://github.com/PawelGawlikDev/tag-viewer"
       },
